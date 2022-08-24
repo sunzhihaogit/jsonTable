@@ -546,7 +546,7 @@ export default {
     // 对话框确认
       console.log('idsds-对话框确认',`${this.dialogType}${this.dialogSource}Handler`,this.dialogType,this.dialogSource)
       const handlerName = `${this.dialogType}${this.dialogSource}Handler`;
-      // this.dialogVisible = false;
+      this.dialogVisible = false;
       if(this[handlerName]) await this[handlerName](this.dialogSource == 'Batch' ? this.selections : this.currentItem);
       // if(this.dialogSource == 'Batch') this.$emit('onBatchTool', this.dialogType, this.selections);
   },
