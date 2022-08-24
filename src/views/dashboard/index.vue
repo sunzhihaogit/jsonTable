@@ -1,6 +1,7 @@
 <template>
   <div class="dashboard-container">
     <div class="dashboard-text">name: {{ name }}</div>
+    <h2>欢迎来到JSON表格</h2>
   </div>
 </template>
 

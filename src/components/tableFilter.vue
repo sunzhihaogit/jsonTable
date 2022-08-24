@@ -128,7 +128,7 @@ export default {
       keywordFrom: '',
       keywordTo: '',
       dictList:[],
-      visible: false,
+      visible: true,
       inputVal: '',
       selectVal: '',
       selectValName: [],
@@ -145,10 +145,7 @@ export default {
   async mounted() {
     this.resetItem() // 初始化的时候重制表单的数据
     if (this.item.dictList) {
-      if (this.item.dictList instanceof DictArray) {
-        await this.item.dictList.loadOnce();
-      }
-      this.dictList = this.item.dictList.data;
+      this.dictList = this.item.dictList;
     }
   },
   methods: {
@@ -372,5 +369,8 @@ export default {
   }
   .el-input__inner {
     padding: 0 8px;
+  }
+  ::v-deep .el-popover {
+    display: none !important;
   }
 </style>

@@ -8,6 +8,8 @@ import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
 import '@/styles/index.scss' // global css
 
+import '@/styles1/component.css'
+
 import App from './App'
 import store from './store'
 import router from './router'
@@ -27,6 +29,7 @@ if (process.env.NODE_ENV === 'production') {
   const { mockXHR } = require('../mock')
   mockXHR()
 }
+import preventReClick from '@/directive/preventReClick/index'; // 防多次点击，重复提交
 
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
